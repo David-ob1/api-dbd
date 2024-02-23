@@ -26,13 +26,20 @@ public class DbdherenciaApplication {
 			Killer trapper = new Killer("Trampero", "Presencia Perturbadora" ,"trampa para osos", 4.6);
 			killerRepositories.save(trapper);
 
-			Killer deathslinger = new Killer(" Deathslinger" , "Interruptor del Hombre Muerto", "Aprehensor", 4.4);
+
+			Killer deathslinger = new Killer("Deathslinger" , "Interruptor del Hombre Muerto", "Aprehensor", 4.4);
 			killerRepositories.save(deathslinger);
+
+
+			Killer nemesis = new Killer("Nemesis","Acecho Letal", "Virus T",4.6);
+			killerRepositories.save(nemesis);
+
 
 			Survivor dwight = new Survivor("Dwight", "Vínculo");
 			survivorRepositories.save(dwight);
 
-
+			Survivor david = new Survivor("David", "Chungo");
+			survivorRepositories.save(david);
 
 		};
 	}
