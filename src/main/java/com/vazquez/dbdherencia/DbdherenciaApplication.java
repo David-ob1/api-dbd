@@ -19,17 +19,17 @@ public class DbdherenciaApplication {
 
 	@Bean
 	public CommandLineRunner initData(KillerRepositories killerRepositories,
-									  SurvivorRepositories survivorRepositories){
+									  SurvivorRepositories survivorRepositories									  ){
 
 		return args ->{
+
+
 
 			Killer trapper = new Killer("Trampero", "Presencia Perturbadora" ,"trampa para osos", 4.6);
 			killerRepositories.save(trapper);
 
-
 			Killer deathslinger = new Killer("Deathslinger" , "Interruptor del Hombre Muerto", "Aprehensor", 4.4);
 			killerRepositories.save(deathslinger);
-
 
 			Killer nemesis = new Killer("Nemesis","Acecho Letal", "Virus T",4.6);
 			killerRepositories.save(nemesis);
@@ -41,6 +41,8 @@ public class DbdherenciaApplication {
 			Survivor david = new Survivor("David", "Chungo");
 			survivorRepositories.save(david);
 
+			Survivor nea = new Survivor("Nea"," Caída Equilibrada");
+			survivorRepositories.save(nea);
 		};
 	}
 }
