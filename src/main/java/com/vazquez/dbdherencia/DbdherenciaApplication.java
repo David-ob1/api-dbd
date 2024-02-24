@@ -2,8 +2,8 @@ package com.vazquez.dbdherencia;
 
 import com.vazquez.dbdherencia.Models.subclass.Killer;
 import com.vazquez.dbdherencia.Models.subclass.Survivor;
-import com.vazquez.dbdherencia.Repositories.KillerRepositories;
-import com.vazquez.dbdherencia.Repositories.SurvivorRepositories;
+import com.vazquez.dbdherencia.Repositories.KillerRepository;
+import com.vazquez.dbdherencia.Repositories.SurvivorRepository;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -18,31 +18,31 @@ public class DbdherenciaApplication {
 
 
 	@Bean
-	public CommandLineRunner initData(KillerRepositories killerRepositories,
-									  SurvivorRepositories survivorRepositories									  ){
+	public CommandLineRunner initData(KillerRepository killerRepository,
+                                      SurvivorRepository survivorRepository){
 
 		return args ->{
 
 
 
 			Killer trapper = new Killer("Trampero", "Presencia Perturbadora" ,"trampa para osos", 4.6);
-			killerRepositories.save(trapper);
+			killerRepository.save(trapper);
 
 			Killer deathslinger = new Killer("Deathslinger" , "Interruptor del Hombre Muerto", "Aprehensor", 4.4);
-			killerRepositories.save(deathslinger);
+			killerRepository.save(deathslinger);
 
 			Killer nemesis = new Killer("Nemesis","Acecho Letal", "Virus T",4.6);
-			killerRepositories.save(nemesis);
+			killerRepository.save(nemesis);
 
 
 			Survivor dwight = new Survivor("Dwight", "Vínculo");
-			survivorRepositories.save(dwight);
+			survivorRepository.save(dwight);
 
 			Survivor david = new Survivor("David", "Chungo");
-			survivorRepositories.save(david);
+			survivorRepository.save(david);
 
 			Survivor nea = new Survivor("Nea"," Caída Equilibrada");
-			survivorRepositories.save(nea);
+			survivorRepository.save(nea);
 		};
 	}
 }
