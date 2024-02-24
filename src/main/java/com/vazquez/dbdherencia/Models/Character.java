@@ -2,9 +2,9 @@ package com.vazquez.dbdherencia.Models;
 
 import jakarta.persistence.*;
 
-@Entity
-//@MappedSuperclass
-//@Inheritance(strategy = InheritanceType.TABLE_PER_CLASS)
+//@Entity
+@MappedSuperclass
+@Inheritance(strategy = InheritanceType.TABLE_PER_CLASS)
 public class Character {
 
     @Id

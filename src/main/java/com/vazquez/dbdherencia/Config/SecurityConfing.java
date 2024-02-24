@@ -21,14 +21,15 @@ public class SecurityConfing {
 
     http.authorizeHttpRequests(ant->
             ant
-               .requestMatchers("/indesx.html").permitAll()
+               .requestMatchers("/index.html","/style.css").permitAll()
+                    .requestMatchers("/formUser.html","wallpaper.jpg").permitAll()
                .requestMatchers(HttpMethod.POST, "/api/person","/api/login").permitAll()
                     .anyRequest().authenticated())
             .csrf(csrf->csrf.disable())
             .headers(headers -> headers.frameOptions(options -> options.disable()));
 
     http.formLogin(formLogin ->
-                formLogin.loginPage("/index.html")
+                formLogin.loginPage("/formUser.html")
                         .loginProcessingUrl("/api/login")
                         .usernameParameter("email")
                         .passwordParameter("password")

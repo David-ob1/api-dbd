@@ -1,8 +1,10 @@
 package com.vazquez.dbdherencia;
 
+import com.vazquez.dbdherencia.Models.Person;
 import com.vazquez.dbdherencia.Models.subclass.Killer;
 import com.vazquez.dbdherencia.Models.subclass.Survivor;
 import com.vazquez.dbdherencia.Repositories.KillerRepository;
+import com.vazquez.dbdherencia.Repositories.PersonRepository;
 import com.vazquez.dbdherencia.Repositories.SurvivorRepository;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
@@ -19,11 +21,13 @@ public class DbdherenciaApplication {
 
 	@Bean
 	public CommandLineRunner initData(KillerRepository killerRepository,
-                                      SurvivorRepository survivorRepository){
+									  SurvivorRepository survivorRepository,
+									  PersonRepository personRepository){
 
 		return args ->{
 
-
+			Person vazquez = new Person("David","davidvazquezt2001@gmail.com","david2001");
+			personRepository.save(vazquez);
 
 			Killer trapper = new Killer("Trampero", "Presencia Perturbadora" ,"trampa para osos", 4.6);
 			killerRepository.save(trapper);
