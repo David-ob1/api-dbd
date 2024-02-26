@@ -1,11 +1,12 @@
 package com.vazquez.dbdherencia.Controllers;
 
+import com.vazquez.dbdherencia.DTO.NewSurvivor;
 import com.vazquez.dbdherencia.Models.subclass.Survivor;
 import com.vazquez.dbdherencia.Repositories.SurvivorRepository;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
@@ -16,8 +17,34 @@ public class SurvivorController {
     private SurvivorRepository survivorRepository;
 
 
+@PostMapping("/add")
+public ResponseEntity<String> addSurvivor (@RequestBody NewSurvivor newSurvivor){
+
+    boolean nameEmpty = newSurvivor.name().isBlank();
+    boolean perkIsEmpty = newSurvivor.perk().isBlank();
+
+
+    if(nameEmpty || perkIsEmpty){
+        StringBuilder response = new StringBuilder();
+
+        response.append(nameEmpty ? "the name is empty" :"");
+        response.append(perkIsEmpty ? "the perk is void" : "");
+
+
+        return new ResponseEntity<>(response.toString(), HttpStatus.FORBIDDEN);
+    }
+
+
+
+    Survivor survivor = new Survivor(newSurvivor.name(),newSurvivor.perk());
+    survivorRepository.save(survivor);
+
+    return new ResponseEntity<>("Se agregor el nuevo survivor", HttpStatus.CREATED);
+}
 
 @GetMapping("/all")
+
+
     public List<Survivor> getAll(){return survivorRepository.findAll();}
 
 }

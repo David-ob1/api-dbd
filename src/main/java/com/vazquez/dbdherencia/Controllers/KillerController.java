@@ -54,7 +54,7 @@ public class KillerController {
 
 
 
-    @GetMapping("")
+    @GetMapping("/all")
     public List<Killer> getAll(){return killerRepository.findAll();}
 
 }
