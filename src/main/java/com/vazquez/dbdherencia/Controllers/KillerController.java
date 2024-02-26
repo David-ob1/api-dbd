@@ -1,5 +1,6 @@
 package com.vazquez.dbdherencia.Controllers;
 
+import com.vazquez.dbdherencia.DTO.NewKiller;
 import com.vazquez.dbdherencia.DTO.NewPerson;
 import com.vazquez.dbdherencia.Models.Person;
 import com.vazquez.dbdherencia.Models.subclass.Killer;
@@ -21,9 +22,22 @@ public class KillerController {
 
 
 
-//    @PostMapping("")
-//    public ResponseEntity<String> addKiller(@RequestBody)
-//
+    @PostMapping("")
+    public ResponseEntity<String> addKiller(@RequestBody NewKiller newKiller){
+    //validation
+
+
+
+
+    Killer killer = new Killer(newKiller.name(),newKiller.perk(),newKiller.power(),newKiller.speed());
+    killerRepository.save(killer);
+
+    return new ResponseEntity<>("Se agrego nuevo killer",HttpStatus.CREATED);
+
+
+    }
+
+
 
     @GetMapping("")
     public List<Killer> getAll(){return killerRepository.findAll();}
