@@ -31,6 +31,6 @@ public class PersonController {
 
 
     @GetMapping("")
-    public List<Person> getAll(){return personRepository.findAll()}
+    public List<Person> getAll(){return personRepository.findAll();}
 
 }
