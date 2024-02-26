@@ -6,4 +6,7 @@ import org.springframework.stereotype.Repository;
 
 @Repository
 public interface SurvivorRepository extends JpaRepository <Survivor,String> {
+
+    boolean existsByName(String name);
+
 }

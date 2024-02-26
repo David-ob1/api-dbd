@@ -8,4 +8,6 @@ import org.springframework.stereotype.Repository;
 public interface KillerRepository extends JpaRepository<Killer,String> {
 
 
+    boolean existsByName(String name);
+
 }
