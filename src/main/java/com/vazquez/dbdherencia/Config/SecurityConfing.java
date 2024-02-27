@@ -21,9 +21,9 @@ public class SecurityConfing {
 
     http.authorizeHttpRequests(ant->
             ant
-               .requestMatchers("/index.html","/style.css").permitAll()
+               .requestMatchers("/index.html","/style.css","/loginUser.js").permitAll()
                     .requestMatchers("/formUser.html","wallpaper.jpg").permitAll()
-               .requestMatchers(HttpMethod.POST, "/api/person","/api/login").permitAll()
+               .requestMatchers(HttpMethod.POST, "/api/persons","/api/login").permitAll()
                     .anyRequest().authenticated())
             .csrf(csrf->csrf.disable())
             .headers(headers -> headers.frameOptions(options -> options.disable()));
@@ -47,7 +47,7 @@ public class SecurityConfing {
 }
 
 
-private void clearAuthenticationAttributes(HttpServletRequest request){
+    private void clearAuthenticationAttributes(HttpServletRequest request){
        HttpSession session =request.getSession(false);
         if(session != null){
             session.removeAttribute(WebAttributes.AUTHENTICATION_EXCEPTION);

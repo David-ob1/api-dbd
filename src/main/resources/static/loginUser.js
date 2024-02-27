@@ -7,10 +7,9 @@ btn.addEventListener("click", e =>{
     e.preventDefault()
     
     let data = `email=${email.value}&password=${password.value}`
-    axios.post("/api/persons",data)
+    axios.post("/api/login",data)
     .then(data =>{
         console.log("sign in!")
-
 
     })
 
