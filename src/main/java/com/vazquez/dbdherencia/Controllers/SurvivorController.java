@@ -42,11 +42,10 @@ public ResponseEntity<String> addSurvivor (@RequestBody NewSurvivor newSurvivor)
     Survivor survivor = new Survivor(newSurvivor.name(),newSurvivor.perk());
     survivorRepository.save(survivor);
 
-    return new ResponseEntity<>("Se agregor el nuevo survivor", HttpStatus.CREATED);
+    return new ResponseEntity<>("Se agrego el nuevo survivor", HttpStatus.CREATED);
 }
 
 @GetMapping("/all")
-
 
     public List<Survivor> getAll(){return survivorRepository.findAll();}
 
