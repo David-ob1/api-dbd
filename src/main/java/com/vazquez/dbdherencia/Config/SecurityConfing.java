@@ -21,7 +21,7 @@ public class SecurityConfing {
 
     http.authorizeHttpRequests(ant->
             ant
-               .requestMatchers("/index.html","/style.css","/loginUser.js").permitAll()
+               .requestMatchers("/pages/index.html","/style.css","/loginUser.js").permitAll()
                     .requestMatchers("/formUser.html","wallpaper.jpg").permitAll()
                .requestMatchers(HttpMethod.POST, "/api/persons","/api/login").permitAll()
                     .anyRequest().authenticated())

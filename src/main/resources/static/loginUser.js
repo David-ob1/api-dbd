@@ -7,10 +7,17 @@ btn.addEventListener("click", e =>{
     e.preventDefault()
     
     let data = `email=${email.value}&password=${password.value}`
-    axios.post("/api/login",data)
+    axios.post("/api/login", data)
     .then(data =>{
         console.log("sign in!")
 
+        alert("hola")
+        
+
+        setTimeout(() => {
+            console.log("Retrasado por 2 segundo.");
+          }, 2000);
+          
     })
 
     .catch(error => {
