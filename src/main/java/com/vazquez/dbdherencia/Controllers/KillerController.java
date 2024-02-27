@@ -43,6 +43,9 @@ public class KillerController {
 
         }
 
+        if(killerRepository.existsByName(newKiller.name())){
+            return new ResponseEntity<>("the killer already exist",HttpStatus.FORBIDDEN);
+        }
 
         Killer killer = new Killer(newKiller.name(),newKiller.perk(),newKiller.power(),newKiller.speed());
         killerRepository.save(killer);

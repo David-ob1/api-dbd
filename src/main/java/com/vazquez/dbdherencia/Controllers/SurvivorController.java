@@ -34,6 +34,9 @@ public ResponseEntity<String> addSurvivor (@RequestBody NewSurvivor newSurvivor)
         return new ResponseEntity<>(response.toString(), HttpStatus.FORBIDDEN);
     }
 
+    if(survivorRepository.existsByName(newSurvivor.name())){
+        return new ResponseEntity<>("the killer survivor exist",HttpStatus.FORBIDDEN);
+    }
 
 
     Survivor survivor = new Survivor(newSurvivor.name(),newSurvivor.perk());
