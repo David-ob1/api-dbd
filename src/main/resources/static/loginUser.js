@@ -4,11 +4,12 @@ let btn = document.getElementById("btn-login")
 
 
 btn.addEventListener("click", e =>{
-    e.preventDefault()
+    // e.preventDefault()
     
-    let data = `email=${email.value}&password=${password.value}`
-    axios.post("/api/login", data)
+    let info = `email=${email.value}&password=${password.value}`
+    axios.post("/api/login", info)
     .then(data =>{
+        console.log(data)
         console.log("sign in!")
 
         alert("hola")
@@ -21,6 +22,7 @@ btn.addEventListener("click", e =>{
     })
 
     .catch(error => {
+        console.log(info)
         alert(error)
     })
 

@@ -22,7 +22,7 @@ public class SecurityConfing {
     http.authorizeHttpRequests(ant->
             ant
                .requestMatchers("/pages/index.html","/style.css","/loginUser.js").permitAll()
-                    .requestMatchers("/formUser.html","wallpaper.jpg").permitAll()
+                    .requestMatchers("/formUser.html","wallpaper.jpg","/h2-console/**").permitAll()
                .requestMatchers(HttpMethod.POST, "/api/persons","/api/login").permitAll()
                     .anyRequest().authenticated())
             .csrf(csrf->csrf.disable())
