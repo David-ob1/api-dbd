@@ -1,30 +1,66 @@
-*{
-  box-sizing: border-box;  
-}
-h1{
-    color: white;
-    text-shadow: 1px 2px 2px black,0 0 25px blue, 0 0 5px blue;
-    text-align: center;
+.card figure{
+    margin: 0;
+    background-color: #0b0b0b;
+    height: 300px;
 }
 
-.galeria{
-    margin: 10px 20px;
-    box-shadow: 0 4px 8px 0 lightblue, 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-    float: left;
-    border: 1px solid transparent;
-}
-
-.galeria img{
+.card figure img{
+   
+    height: 300px;
     width: 100%;
-    height: auto;    
+    object-fit: cover;
 }
-.galeria:hover{
-    border: 1px solid lightcoral;
-    /* transform: rotate(); */
+.container{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap:30px;
+    padding: 20px 0;
 }
 
-.pie{
+.card{
+    border: 1px solid black;
+
+    border-radius: 5px;
+    box-shadow: 0 1px rgba(0,0,0,0.2);
+    width: 300px;
+    transition: all 400ms ease;
+    overflow: hidden;
+    padding-bottom:20px ;
+}
+.card:hover{
+    box-shadow: 5px 5px 20px rgba(0,0,0,0.4);
+    transform: translateY(-3%);
+}
+
+.content{
+    padding: 0 10px;
     text-align: center;
-    text-shadow:2px 2px 5px purple ;
+}
+
+.content h2{
+   font-weight: 400;
+   margin-bottom:10px ;
+   
+}
+
+.content p{
+    margin-bottom: 30px;
+    line-height: 1.5;
+    color: #6a6a6a;
+}
+.content .button {
     padding: 10px;
+    color: #2fb4cc;
+    border: 1px solid #2fb4cc;
+    border-radius:4px ;
+    transition: all 400ms ease;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.content .button:hover{
+    background-color:#2fb4cc ;
+    color: #fff;
 }

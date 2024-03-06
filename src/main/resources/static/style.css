@@ -7,7 +7,7 @@
     box-sizing: border-box;
 }
 
-body{
+.bodylogin{
     display: flex;
     justify-content: center;
     align-items: center;
