@@ -21,8 +21,8 @@ public class SecurityConfing {
 
     http.authorizeHttpRequests(ant->
             ant
-               .requestMatchers("/pages/index.html","/style.css","/loginUser.js").permitAll()
-                    .requestMatchers("/formUser.html","wallpaper.jpg","/h2-console/**").permitAll()
+               .requestMatchers("/pages/index.html","/pages/assets/landing.css","/style.css","/img/**").permitAll()
+                    .requestMatchers("/formUser.html","/loginUser.js","wallpaper.jpg","wallpaperflare.com_wallpaper.jpg","/h2-console/**").permitAll()
                .requestMatchers(HttpMethod.POST, "/api/persons","/api/login").permitAll()
                     .anyRequest().authenticated())
             .csrf(csrf->csrf.disable())
