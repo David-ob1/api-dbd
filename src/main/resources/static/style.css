@@ -6,18 +6,24 @@
     padding: 0;
     box-sizing: border-box;
 }
-
 .bodylogin{
+    background:url("./img/wallpaper.jpg") no-repeat ;
+}
+
+.add-Killer{
+    background:url("./pages/assets/images/background.jpg") no-repeat ;
+}
+
+.bodylogin,.add-Killer{
     display: flex;
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    background:url("./img/wallpaper.jpg") no-repeat ;
     background-position: center;
     background-size: cover;
 }
 
-.fondo{
+.glass{
     padding: 30px 40px;
     width: 420px;
     border: 2px solid rgba(255, 255, 255, 0.3);
@@ -27,12 +33,12 @@
     color: #fff;
 }
 
-.fondo h1{
+.glass h1{
     text-align: center;
     font-size: 40px;
 }
 
-.fondo .input-box{
+.glass .input-box{
     position: relative;
     width: 100%;
     height: 50px;
@@ -56,7 +62,7 @@
     color: #fff;
 }
 
-.input-box i {
+.input-box i ,.input-box img {
     position: absolute;
     right: 20px;
     top: 50%;
@@ -64,7 +70,7 @@
     font-size: 24px;
 }
 
-.fondo .olvidar-recordar{
+.glass .olvidar-recordar{
     display: flex;
     justify-content: space-between;
     font-size: 14.5px;
@@ -90,7 +96,7 @@
 }
 
 
-.fondo .btn{
+.glass .btn{
     width: 100%;
     height: 45px;
     background: #fff;
@@ -104,7 +110,7 @@
     color: #212121;
 }
 
-.fondo .btn:hover{
+.glass .btn:hover{
     opacity: 0.9;
 }
 

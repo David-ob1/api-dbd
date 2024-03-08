@@ -1,8 +1,6 @@
 package com.vazquez.dbdherencia.Controllers;
 
 import com.vazquez.dbdherencia.DTO.NewKiller;
-import com.vazquez.dbdherencia.DTO.NewPerson;
-import com.vazquez.dbdherencia.Models.Person;
 import com.vazquez.dbdherencia.Models.subclass.Killer;
 import com.vazquez.dbdherencia.Repositories.KillerRepository;
 import org.springframework.beans.factory.annotation.Autowired;

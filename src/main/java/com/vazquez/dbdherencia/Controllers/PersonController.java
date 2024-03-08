@@ -15,10 +15,8 @@ import java.util.List;
 @RestController
 @RequestMapping("/api/persons")
 public class PersonController {
-
     @Autowired
     private PersonRepository personRepository;
-
 
     @PostMapping("")
     public ResponseEntity<String> registerPerson(@RequestBody NewPerson newPerson){
@@ -33,6 +31,7 @@ public class PersonController {
 
     @GetMapping("")
     public List<Person> getAll(){return personRepository.findAll();}
+
 
     @GetMapping("/current")
     public PersonDTO getAll(Authentication authentication){
