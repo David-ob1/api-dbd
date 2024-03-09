@@ -45,14 +45,13 @@ public class KillerController {
             return new ResponseEntity<>("the killer already exist",HttpStatus.FORBIDDEN);
         }
 
-        Killer killer = new Killer(newKiller.name(),newKiller.perk(),newKiller.power(),newKiller.speed());
+        Killer killer = new Killer(newKiller.name(),newKiller.perk(),newKiller.power(),newKiller.speed(),newKiller.height(),newKiller.terrorRadius());
         killerRepository.save(killer);
 
     return new ResponseEntity<>("Se agrego nuevo killer",HttpStatus.CREATED);
 
 
     }
-
 
 
     @GetMapping("/all")

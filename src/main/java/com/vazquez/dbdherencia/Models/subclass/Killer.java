@@ -16,15 +16,28 @@ public class Killer extends Character {
 
     private double speed;
 
+    private String height;
+
+    private int terrorRadius;
+
 
     public Killer() {
     }
 
-    public Killer(String name, String perk, String power, double speed) {
+    public Killer(String name, String perk, String power, double speed, String height, int terrorRadius) {
         super(name, perk);
         this.power = power;
         this.speed = speed;
+        this.height = height;
+        this.terrorRadius = terrorRadius;
     }
+
+
+    //    public Killer(String name, String perk, String power, double speed) {
+//        super(name, perk);
+//        this.power = power;
+//        this.speed = speed;
+//    }
 //
 //    private String Skill;
 //
