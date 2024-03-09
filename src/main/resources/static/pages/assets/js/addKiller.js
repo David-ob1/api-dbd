@@ -9,11 +9,14 @@ btn.addEventListener("click", e =>{
 
   const valores = obtenerValores()
     
-    console.log(valores.killer)
+    console.log(valores.name)
+    console.log(valores.perk)
     console.log(valores.skill)
     console.log(valores.height)
     console.log(valores.speed)
     console.log(valores.terrorRadius)
+
+    // enviarDatos(valores,"/api/killers/add")    
 
 })
 
@@ -21,10 +24,11 @@ btn.addEventListener("click", e =>{
 function obtenerValores (){
   
     return {
-        killer: document.getElementById("killer").value,
+        name: document.getElementById("killer").value,
+        perk: document.getElementById("perk").value,
+        speed: document.getElementById("speed").value,
         skill: document.getElementById("skill").value,
         height: document.getElementById("height").value,
-        speed: document.getElementById("speed").value,
         terrorRadius: document.getElementById("terrorRadius").value,
     
 

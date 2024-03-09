@@ -20,7 +20,7 @@ public class KillerController {
 
 
 
-    @PostMapping("")
+    @PostMapping("/add")
     public ResponseEntity<String> addKiller(@RequestBody NewKiller newKiller){
     //validation
 
