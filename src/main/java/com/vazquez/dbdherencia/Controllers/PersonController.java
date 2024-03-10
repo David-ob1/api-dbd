@@ -8,6 +8,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.core.Authentication;
+import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -18,10 +19,13 @@ public class PersonController {
     @Autowired
     private PersonRepository personRepository;
 
+    @Autowired
+    private PasswordEncoder passwordEncoder;
+
     @PostMapping("")
     public ResponseEntity<String> registerPerson(@RequestBody NewPerson newPerson){
 
-        Person person = new Person(newPerson.name(), newPerson.email(), newPerson.password());
+        Person person = new Person(newPerson.name(), newPerson.email(),passwordEncoder.encode(newPerson.password()));
         personRepository.save(person);
 
         return new ResponseEntity<>("Todo salio bien", HttpStatus.CREATED);

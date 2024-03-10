@@ -15,7 +15,7 @@ public class Person {
 
     private String name,email,password;
 
-    public Person(Person byEmail) {
+    public Person() {
     }
 
     public Person(String name, String email, String password) {

@@ -1,49 +1,106 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./assets/landing.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./assets/landing.css" />
+    <link
+      rel="shortcut icon"
+      href="./assets/images/icon.jpg"
+      type="image/x-icon"
+    />
     <title>Landing Page</title>
-</head>
-<body>
+  </head>
+  <body>
     <header>
-    <nav class="navegador">
-        <img class="nav-logo" src="../img/dbd-logo.jpg" alt="">
+      <nav class="navegador">
+        <img class="nav-logo" src="../img/dbd-logo.jpg" alt="" />
         <ul class="nav-menu">
-            <li class="item"> <a href=""> Home </a></li>
-            <li class="item"> <a href=""> All Killers </a></li>
-            <li class="item"> <a href=""> All Survivor </a></li>
-            <li class="item"> <a href=""> User </a></li>
+          <li class="item"><a href=""> Home </a></li>
+          <li class="item"><a href=""> All Killers </a></li>
+          <li class="item"><a href=""> All Survivor </a></li>
+          <li class="item"><a href=""> User </a></li>
         </ul>
-        
-     
+
         <a class="login" href="">login</a>
+      </nav>
+    </header>
+    <main>
+      <div class="banner"></div>
+      <!-- <h1>titulo index / landing page</h1> -->
+
+      <section class="post-banner">
+        <h3>choose between killers or survivors</h3>
+
+        <div class="img-icons">
+          <img src="../img/survivor-icon.png" alt="" />
+          <img src="../img/killer-icon.jpg" alt="" />
+        </div>
+      </section>
+      <div class="choose-one">
+        <article class="the-killers">
+          <div class="box-k">
+            <h3 class="play-as">PLAY AS</h3>
+            <p style="margin-bottom: 15px;">THE KILLER (SOLO)</p>
+
+            <a class="box-link bg-red" href="">all killer</a>
+          </div>
+          <div class="content-icon killer-left">
+            <img src="../img/killer-icon.jpg" alt="" />
+          </div>
+        </article>
+        <article class="the-survivors">
+          <div class="content-icon survi-right">
+            <img src="../img/survivor-icon.png" alt="" />
+          </div>
+
+          <div class="box-s">
+            <h3 class="play-as">PLAY AS</h3>
+            <p style="margin-bottom: 15px;">A SURVIVOR (CO-OP)</p>
+
+            <a class="box-link bg-blue" href="">all survivor</a>
+          </div>
+        </article>
+      </div>
+
+      <div class="dlcs">
+        <div class="tipe">
+          <img src="../img/killer-icon.jpg" alt="" " class="back-image-L">
+          <img src="../img/survivor-icon.png" alt="" class="back-image-R" />
+        </div>
+
+        <div class="dlcs-packs">
+          <h2>ICONS OF HORROR</h2>
+          <div class="container-packs">
+            <div class="container-killer">
+              <img src="../img/ghost-dlc.jpg" alt="" />
+
+              <img src="../img/saw-dlc.jpg" alt="" />
+            </div>
+
+            <div class="container-survi">
+              <div class="card-dlc">
+                <img src="../img/leon.jpg" alt="" />
+                <img src="../img/dlc-re.webp" alt="" />
+              </div>
+
+              <div class="card-dlc">
+                <img src="../img/cheryl.jpg" alt="" />
+                <img src="../img/dlc-silent-hill.jpg" alt="" />
+              </div>
+
+            </div>
+        </div>
+        <br>
         
-    </nav>
-</header>
-<main>
-    <div class="banner">
+        <br>
+          <h3 style="font-size: 40px;font-family: sans-serif;">The only game where horror’s greatest franchises collide.</h3>
+          <br>
+          <br>
 
-    </div>
-    <!-- <h1>titulo index / landing page</h1> -->
-
-
-    <section class="post-banner">
-        choose between killers or survivors
-    </section>
-    <div class="">
-        <article>
-    <!-- #aa1a18 -->
-        </article>
-        <article>
-            <!-- #2e63a1 -->
-        </article>
-    </div>
-
-</main>
-<footer>
-    
-</footer> 
-</body>
+        </div>
+      </div>
+    </main>
+    <footer></footer>
+  </body>
 </html>

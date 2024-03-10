@@ -3,6 +3,9 @@
     padding: 0;
     box-sizing: border-box;
 }
+body{
+    background: white;
+}
 .navegador{
     width: 100%;
     height: 80px;
@@ -20,7 +23,7 @@
 
 
 .nav-menu{
-    border: 1px solid wheat;
+    /* border: 1px solid wheat; */
     height: 100%;
     display: flex;
     list-style: none;
@@ -66,4 +69,262 @@
     background: url(../../img/wallpaperflare.com_wallpaper.jpg)no-repeat;
     background-size: cover;
     background-position: 0% 25%;
+}
+
+.post-banner{
+    /* background: #4c4c4c; */
+    background: black;
+    height: 150px;
+    font-size: 30px;
+    font-family: sans-serif;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.img-icons{
+    width: 30%;
+    display: flex;
+    justify-content: center;
+    gap: 5px;
+    
+}
+
+.img-icons img{
+    box-sizing: content-box;
+    width: 100px;
+    padding: 10px;
+    
+}
+
+.img-icons img:first-child{
+    border-right: 1px solid white;
+}
+
+.choose-one{
+    background-color: black;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.the-killers, .the-survivors{
+    width: 48.5%;
+    height: 20rem;
+    display: flex;
+    gap: 30px;
+
+}
+.box-k,.box-s{
+    margin-top: 2rem;
+    color: white;
+    font-size: 42px;
+    font-weight: 200;
+    gap: 10px;
+    
+}
+
+
+.box-k{
+    text-align: right;
+}
+
+.play-as{
+    font-size:64px;
+}
+
+.the-killers img, .the-survivors img{
+    width: 75px;
+    height: 75px;
+}
+
+.content-icon{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    width: 98.96px;
+    height: 98.95px;
+    background-color: black;
+    border-radius: 50%;
+    margin-top: 2.5rem;
+
+}
+
+.killer-left{
+    margin-right: 3rem;
+}
+
+.survi-right{
+    margin-left: 3rem;
+}
+.choose-one .the-killers{
+    background-color: #aa1a18;
+    justify-content: right;
+    margin-right: 15px;
+}
+
+.choose-one .the-survivors{
+    background-color: #2e63a1;
+
+}
+
+.box-link{
+    margin: 1rem;
+    color: white;
+    text-transform: uppercase;
+    text-decoration: none;
+    font-size: 22px;
+    font-family: Arial;
+    border: 2px solid white;
+    padding: 16px 50px;
+}
+
+
+.bg-red{
+    background-color: #66100e;
+}
+
+.bg-blue{
+    background-color:#1c3b61;
+}
+
+
+.box-link:hover{
+background:#cc0000 ;
+}
+
+.collaboration{
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+}
+
+.dlc-killer{
+    background: #aa1a18;
+}
+
+.dlc-survi{
+background:#2e63a1 ;
+}
+
+
+.dlcs{
+    width: 100%;
+    height: 3rem;
+    background-color: black;
+}
+
+.tipe,
+.dlcs-packs{
+    position: absolute;
+}
+/* linear-gradient(to bottom, rgba(170, 26, 24, 1) 0%, rgba(170, 26, 24, 0.7) 100%); */
+.tipe{
+    padding-top: 3rem;
+    width: 100%;
+    height: 80%;
+    background: linear-gradient(to right, #aa1a18 0%, #aa1a18 48.5%,black 48.5%, black 51.5% , #2e63a1 51.5%, #2e63a1 100%);
+    display: flex;
+    justify-content:space-between;
+    overflow: hidden;
+}
+.back-image-L{
+    width:220px;
+    height: 220px;
+    opacity: .4;
+    transform: translateX(-50px); 
+}
+.back-image-R{
+    width:220px;
+    height: 220px;
+    opacity: .4;  
+    transform: translateX(50px); 
+}
+
+.dlcs-packs{
+    
+    color: white    ;
+    text-align: center;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.65);
+}
+
+.dlcs-packs h2{
+    margin-top: 2rem;
+    padding: 3rem;
+    font-size: 64px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.container-packs{
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.container-killer,.container-survi{
+    display: flex;
+    flex-wrap: wrap;
+    width: 48.5%;
+}
+
+.container-killer{
+    justify-content: end;
+    flex-wrap: wrap;
+    gap: 2rem;
+
+}
+
+
+.container-killer img {
+    border: 1px solid white;
+    width: 50%;
+    max-width: 310px;
+    min-width: 230px;
+    height: 435px;
+}
+
+.container-survi{
+    width: 48.5%;
+    display: flex;
+    justify-content: start;
+    gap:3%;
+ }
+
+ .container-survi .card-dlc {
+    position: relative;
+    min-width: 230px;
+    max-width: 310px;
+    width: 50%;
+    height: 435px;
+    border: 1px solid white;
+    overflow: hidden;
+}
+
+.card-dlc:first-child {
+    background: url(../../img/re-fondo.jpg) no-repeat;
+    background-size: cover;
+/* background-color: #222635; */
+}
+
+.card-dlc:nth-child(2){
+    background: url(../../img/sh-fondo.jpg) no-repeat;
+    background-size: cover;
+}
+.container-survi .card-dlc > img{
+    left: 0;
+    position: absolute;
+    width: 100%;
+   
+}
+
+.container-survi .card-dlc > img:first-child{
+    height:100% ;
+    object-fit: cover;
+}
+
+.card-dlc img:nth-child(2) {
+    left: 0;
+    bottom:0px; /* Mover la segunda imagen a la parte superior del contenedor */
 }
