@@ -1,14 +1,14 @@
 const cards = document.querySelectorAll(".card")
-
-
-
+const containerDescription = document.getElementById("card-descr")
+let descriptionImg 
 
 
 cards.forEach(card => {
     card.addEventListener("click", () => {
-        // Función que se ejecutará cuando se haga clic en cada elemento "card"
-        console.log(card.id)
-        alert(card.id)
+
+        descriptionImg = `<img src="./assets/images/${card.id}.jpg" alt="" />`
+        containerDescription.innerHTML  = descriptionImg
+        
     })
 })
 

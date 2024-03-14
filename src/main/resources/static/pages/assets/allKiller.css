@@ -44,11 +44,19 @@
 .card figure{
     padding: 8px;
     margin: 2px;
-    /* border: 1px solid red; */
+    /* border: 1px solid red; */    
     
 }
 .card figure img{
-box-shadow: 0px 2px 4px 1px rgba(121 ,17, 16,0.8);
+box-shadow: 0px 2px 4px  rgba(121 ,17, 16,0.8);
+}
+
+.card:hover p{
+    text-decoration: underline;
+}
+
+.card:hover figure img{
+    box-shadow: 0px 2px 6px 3px rgba(121 ,17, 16,0.8);
 }
 
 .card-descr{
@@ -58,4 +66,8 @@ box-shadow: 0px 2px 4px 1px rgba(121 ,17, 16,0.8);
     width: 45%;
     background-color: #0b0b0b;
 
+}
+
+.card-descr img{
+    height: 300px;
 }
