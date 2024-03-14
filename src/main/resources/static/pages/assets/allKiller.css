@@ -20,7 +20,7 @@
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-    gap:30px;
+    /* gap:30px; */
     padding: 20px 0;
     max-height: 100vh;
     /* overflow: scroll;
@@ -55,7 +55,7 @@ box-shadow: 0px 2px 4px 1px rgba(121 ,17, 16,0.8);
     display: flex;
     justify-content: center;
     align-items: centers;
-    width: 50%;
+    width: 45%;
     background-color: #0b0b0b;
 
 }

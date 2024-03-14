@@ -18,4 +18,5 @@ console.log($containerCards.clientHeight)
 if( $containerCards.clientHeight > window.innerHeight ){
     $containerCards.style.overflow = 'scroll' 
     $containerCards.style['overflow-x'] = ' hidden'
+    $containerCards.style.gap ="5px"
 }

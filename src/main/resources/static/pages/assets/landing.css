@@ -211,12 +211,11 @@ background:#2e63a1 ;
 
 .dlcs{
     width: 100%;
-    height: 3rem;
+    /* height: 3rem; */
     background-color: black;
 }
 
-.tipe,
-.dlcs-packs{
+.tipe{
     position: absolute;
 }
 /* linear-gradient(to bottom, rgba(170, 26, 24, 1) 0%, rgba(170, 26, 24, 0.7) 100%); */
@@ -230,15 +229,15 @@ background:#2e63a1 ;
     overflow: hidden;
 }
 .back-image-L{
-    width:220px;
-    height: 220px;
-    opacity: .4;
+    width:270px;
+    height: 270px;
+    opacity: .5;
     transform: translateX(-50px); 
 }
 .back-image-R{
-    width:220px;
-    height: 220px;
-    opacity: .4;  
+    width:270px;
+    height: 270px;
+    opacity: .5;  
     transform: translateX(50px); 
 }
 
@@ -247,11 +246,12 @@ background:#2e63a1 ;
     color: white    ;
     text-align: center;
     width: 100%;
-    background-color: rgba(0, 0, 0, 0.65);
+    background-color: rgba(0, 0, 0, 0.6);
+    backdrop-filter:blur(2px) ;
 }
 
 .dlcs-packs h2{
-    margin-top: 2rem;
+    /* margin-top: 2rem; */
     padding: 3rem;
     font-size: 64px;
     font-family: Arial, Helvetica, sans-serif;
@@ -328,3 +328,32 @@ background:#2e63a1 ;
     left: 0;
     bottom:0px; /* Mover la segunda imagen a la parte superior del contenedor */
 }
+
+
+.wood{
+   background-color: rgba(0, 0, 0, 0.6);
+    display: flex;
+    width: 100%;
+    background: url(../../img/wood-background.jpg) no-repeat;
+    filter: grayscale(40%) ;
+    background-size: cover;
+    /* height: 600px; */
+height: 80vh;
+}
+
+.wood img {
+   margin: 30px;
+}
+
+/* .wood {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    position: relative;
+    width: 100%;
+    background: url(../../img/wood-background.jpg) no-repeat;
+    background-size: cover;
+    height: 400px;
+    color: white; /* Ajusta el color del texto según necesites 
+} */
+
