@@ -8,12 +8,6 @@ import jakarta.persistence.Id;
 @Entity
 public class Survivor extends Character {
 
-//    @Id
-//    @GeneratedValue(strategy = GenerationType.UUID)
-//    private String id;
-//
-
-
     public Survivor() {
 
     }
@@ -22,13 +16,6 @@ public class Survivor extends Character {
         super(name, perk);
     }
 
-
-
-//
-//    public String getId() {
-//        return id;
-//    }
-//
 
 }
 
