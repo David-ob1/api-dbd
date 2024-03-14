@@ -345,15 +345,61 @@ height: 80vh;
    margin: 30px;
 }
 
-/* .wood {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    position: relative;
-    width: 100%;
-    background: url(../../img/wood-background.jpg) no-repeat;
-    background-size: cover;
-    height: 400px;
-    color: white; /* Ajusta el color del texto según necesites 
-} */
+footer{
+    text-align: center;
+    color: white;
+    background-color: #121212;
+    padding: 3rem;
 
+}
+
+footer h3{
+    font-size: 24px;
+}
+footer > div{
+    margin: 3rem 0; 
+}
+
+footer  ul {
+    list-style: none;
+    display: flex ;
+    justify-content: center;
+    flex-wrap: wrap;
+    /* width: 100%; */
+    margin: 1rem;
+    margin-top: 2rem;
+}
+
+footer  ul > li{
+    display: flex;
+    align-items: center;
+    
+    padding: 0 2rem;
+}
+
+.platform{
+    padding: 5px;
+    height: 60px;
+}
+.img-texto{
+    padding: 2px;
+    height: 30px;
+}
+.icon{
+    padding: 5px;
+    color: white;
+    font-size: 50px;
+}
+
+.social{
+    padding: 10px;
+    border-radius: 50%;
+    border: 2px solid white;
+    font-size: 25px;
+}
+
+.social:hover {
+    cursor: pointer;
+    transition: 0.3s;
+    background-color: #aa1a18;
+}
