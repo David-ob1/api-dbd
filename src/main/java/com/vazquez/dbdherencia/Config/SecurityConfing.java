@@ -23,7 +23,11 @@ public class SecurityConfing {
             ant
                .requestMatchers("/pages/index.html","/pages/assets/landing.css","/style.css","/img/**").permitAll()
                     .requestMatchers("/formUser.html","/loginUser.js","/h2-console/**").permitAll()
-               .requestMatchers(HttpMethod.POST, "/api/persons","/api/login").permitAll()
+
+                    .requestMatchers("/api/killers/all","/pages/allkiller.html","/pages/assets/js/allKiller.js","/pages/assets/allKiller.css").permitAll()
+                    .requestMatchers("/pages/assets/portada/**","/pages/assets/images/**").permitAll()
+
+                    .requestMatchers(HttpMethod.POST, "/api/persons","/api/login").permitAll()
                     .anyRequest().authenticated())
             .csrf(csrf->csrf.disable())
             .headers(headers -> headers.frameOptions(options -> options.disable()));
