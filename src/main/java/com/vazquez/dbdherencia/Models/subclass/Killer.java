@@ -8,10 +8,10 @@ import jakarta.persistence.Id;
 @Entity
 public class Killer extends Character {
 
-//    @Id
-//    @GeneratedValue(strategy = GenerationType.UUID)
-//    private String id;
-//
+    @Id
+    @GeneratedValue(strategy = GenerationType.UUID)
+    private String id;
+
     private String power;
 
     private double speed;
@@ -32,16 +32,39 @@ public class Killer extends Character {
         this.terrorRadius = terrorRadius;
     }
 
+    public String getId() {
+        return id;
+    }
 
-    //    public Killer(String name, String perk, String power, double speed) {
-//        super(name, perk);
-//        this.power = power;
-//        this.speed = speed;
-//    }
-//
-//    private String Skill;
-//
+    public String getPower() {
+        return power;
+    }
 
+    public void setPower(String power) {
+        this.power = power;
+    }
 
+    public double getSpeed() {
+        return speed;
+    }
 
+    public void setSpeed(double speed) {
+        this.speed = speed;
+    }
+
+    public String getHeight() {
+        return height;
+    }
+
+    public void setHeight(String height) {
+        this.height = height;
+    }
+
+    public int getTerrorRadius() {
+        return terrorRadius;
+    }
+
+    public void setTerrorRadius(int terrorRadius) {
+        this.terrorRadius = terrorRadius;
+    }
 }

@@ -7,9 +7,9 @@ import jakarta.persistence.*;
 @Inheritance(strategy = InheritanceType.TABLE_PER_CLASS)
 public class Character {
 
-    @Id
-    @GeneratedValue(strategy = GenerationType.UUID)
-    private String id;
+//    @Id
+//    @GeneratedValue(strategy = GenerationType.UUID)
+//    private String id;
 
     private String name;
 
@@ -24,5 +24,19 @@ public class Character {
     }
 
 
+    public String getName() {
+        return name;
+    }
 
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public String getPerk() {
+        return perk;
+    }
+
+    public void setPerk(String perk) {
+        this.perk = perk;
+    }
 }
