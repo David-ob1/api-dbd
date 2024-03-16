@@ -1,38 +1,71 @@
-const cards = document.querySelectorAll(".card")
+
 const containerDescription = document.getElementById("card-descr")
+
+let allKiller
 let descriptionImg 
 
 let endpointGet = "/api/killers/all"
 fetch(endpointGet)
  .then(response => response.json())
  .then(data =>{
-    let killers = data
+     allKiller = data
+     console.log(allKiller)
+   
 
-    console.log(killers)
- } )
- .catch()
+     const template = generateTemplate (allKiller)
+     setCards(template,$containerCards)
 
+ const cards = document.querySelectorAll(".card")
 
-cards.forEach(card => {
-    card.addEventListener("click", () => {
-
-        descriptionImg = `<img src="./assets/images/${card.id}.jpg" alt="" />`
-        containerDescription.innerHTML  = descriptionImg
-        
+     cards.forEach(card => {
+        card.addEventListener("click", () => {
+    
+            descriptionImg = `<img src="./assets/images/${card.id}.jpg" alt="" />`
+            containerDescription.innerHTML  = descriptionImg
+            
+        })
     })
-})
 
+ } )
+ .catch(
+    error => alert(error)
+ )
+
+
+// console.log(allKiller)
+//  const template = generateTemplate (allKiller)
+// setCards(template,$containerCards)
+
+
+// console.log($containerCards.clientHeight)
 const $containerCards = document.querySelector(".container-cards")
-console.log($containerCards.clientHeight)
+scroll($containerCards)
+function scroll ($containerCards){
 
-if( $containerCards.clientHeight > window.innerHeight ){
-    $containerCards.style.overflow = 'scroll' 
-    $containerCards.style['overflow-x'] = ' hidden'
-    $containerCards.style.gap ="5px"
+    // alert("hola")
+    if( $containerCards.clientHeight > window.innerHeight ){
+        $containerCards.style.overflow = 'scroll' 
+        $containerCards.style['overflow-x'] = ' hidden'
+        $containerCards.style.gap ="5px"
+    }
+
+
 }
 
 
-function generateTemplate (killer){
+function generateTemplate (array){
+    console.log(array)
+    let template = ""
+     for( item of array){
+            template += createCard(item)
+    
+        }
+
+       return template
+}
+
+
+function createCard (killer){
     return`
     <div class="card" id="${killer.name}">
     <p class="name-killer">${killer.name}</p>
@@ -43,6 +76,12 @@ function generateTemplate (killer){
     `
 }
 
-function setCards(cards,container){
+
+
+
+
+
+function setCards(template,container){
     
+    container.innerHTML += template
 }

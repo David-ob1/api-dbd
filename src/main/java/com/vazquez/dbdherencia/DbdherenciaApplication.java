@@ -29,7 +29,7 @@ public class DbdherenciaApplication {
 			Person vazquez = new Person("David","davidvazquezt2001@gmail.com","david2001");
 			personRepository.save(vazquez);
 
-			Killer trapper = new Killer("Trampero", "Presencia Perturbadora" ,"trampa para osos",
+			Killer trapper = new Killer("Trapper", "Presencia Perturbadora" ,"trampa para osos",
 					4.6,"Tall",32);
 			killerRepository.save(trapper);
 
