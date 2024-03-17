@@ -30,15 +30,12 @@ fetch(endpointGet)
         })
     })
     
-        // alert("hola")
-        
-    
     
 
 
  } )
  .catch(
-    error => alert(error)
+    error => console.log(error)
  )
 
 
@@ -74,10 +71,6 @@ function createCard (killer){
 }
 
 
-
-
-
-
 function setCards(template,container){
     
     container.innerHTML += template
@@ -89,7 +82,7 @@ function setCards(template,container){
         container.style.overflow = 'scroll' 
         container.style['overflow-x'] = ' hidden'
     }
-      }, 50);
+      }, 35);
       
     
     console.log(container.clientHeight)
