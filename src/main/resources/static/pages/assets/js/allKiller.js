@@ -1,5 +1,8 @@
 
 const containerDescription = document.getElementById("card-descr")
+const $containerCards = document.querySelector(".container-cards")
+console.log($containerCards.clientHeight)
+
 
 let allKiller
 let descriptionImg 
@@ -16,15 +19,22 @@ fetch(endpointGet)
      setCards(template,$containerCards)
 
  const cards = document.querySelectorAll(".card")
-
-     cards.forEach(card => {
-        card.addEventListener("click", () => {
-    
-            descriptionImg = `<img src="./assets/images/${card.id}.jpg" alt="" />`
-            containerDescription.innerHTML  = descriptionImg
-            
+ 
+ 
+ cards.forEach(card => {
+     card.addEventListener("click", () => {
+         
+         descriptionImg = `<img src="./assets/images/${card.id}.jpg" alt="" />`
+         containerDescription.innerHTML  = descriptionImg
+         
         })
     })
+    
+        // alert("hola")
+        
+    
+    
+
 
  } )
  .catch(
@@ -38,19 +48,6 @@ fetch(endpointGet)
 
 
 // console.log($containerCards.clientHeight)
-const $containerCards = document.querySelector(".container-cards")
-scroll($containerCards)
-function scroll ($containerCards){
-
-    // alert("hola")
-    if( $containerCards.clientHeight > window.innerHeight ){
-        $containerCards.style.overflow = 'scroll' 
-        $containerCards.style['overflow-x'] = ' hidden'
-        $containerCards.style.gap ="5px"
-    }
-
-
-}
 
 
 function generateTemplate (array){
@@ -84,4 +81,20 @@ function createCard (killer){
 function setCards(template,container){
     
     container.innerHTML += template
+  
+    setTimeout(() => {
+       
+    if( container.clientHeight > window.innerHeight ){
+
+        container.style.overflow = 'scroll' 
+        container.style['overflow-x'] = ' hidden'
+    }
+      }, 50);
+      
+    
+    console.log(container.clientHeight)
+    console.log(window.innerHeight)
+
 }
+
+        // container.style.gap ="5px"

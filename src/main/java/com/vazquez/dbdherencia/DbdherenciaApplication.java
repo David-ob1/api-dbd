@@ -48,7 +48,7 @@ public class DbdherenciaApplication {
 			Survivor david = new Survivor("David", "Chungo");
 			survivorRepository.save(david);
 
-			Survivor nea = new Survivor("Nea"," Caída Equilibrada");
+			Survivor nea = new Survivor("Nea","Caída Equilibrada");
 			survivorRepository.save(nea);
 		};
 	}
