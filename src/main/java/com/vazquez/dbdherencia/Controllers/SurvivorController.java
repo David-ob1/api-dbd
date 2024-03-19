@@ -21,7 +21,7 @@ public class SurvivorController {
 public ResponseEntity<String> addSurvivor (@RequestBody NewSurvivor newSurvivor){
 
     boolean nameEmpty = newSurvivor.name().isBlank();
-    boolean perkIsEmpty = newSurvivor.perk().isBlank();
+    boolean perkIsEmpty = newSurvivor.perk1().isBlank();
 
 
     if(nameEmpty || perkIsEmpty){
@@ -39,7 +39,7 @@ public ResponseEntity<String> addSurvivor (@RequestBody NewSurvivor newSurvivor)
     }
 
 
-    Survivor survivor = new Survivor(newSurvivor.name(),newSurvivor.perk());
+    Survivor survivor = new Survivor(newSurvivor.name(),newSurvivor.perk1(), newSurvivor.perk2(), newSurvivor.perk3());
     survivorRepository.save(survivor);
 
     return new ResponseEntity<>("Se agrego el nuevo survivor", HttpStatus.CREATED);

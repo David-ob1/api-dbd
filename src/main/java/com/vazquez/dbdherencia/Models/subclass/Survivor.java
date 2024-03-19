@@ -17,10 +17,9 @@ public class Survivor extends Character {
 
     }
 
-    public Survivor(String name, String perk) {
-        super(name, perk);
+    public Survivor(String name, String perk1, String perk2, String perk3) {
+        super(name, perk1, perk2, perk3);
     }
-
 
     public String getId() {
         return id;

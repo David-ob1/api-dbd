@@ -51,13 +51,16 @@ public class DbdherenciaApplication {
 			killerRepository.save(nemesis);
 
 
-			Survivor dwight = new Survivor("Dwight", "Vínculo");
+			Survivor dwight = new Survivor("Dwight",
+					"Bond","Leader","Prove Thyself");
 			survivorRepository.save(dwight);
 
-			Survivor david = new Survivor("David", "Chungo");
+			Survivor david = new Survivor("David",
+					"Dead Hard","No Mither","We're Gonna Live Forever");
 			survivorRepository.save(david);
 
-			Survivor nea = new Survivor("Nea","Caída Equilibrada");
+			Survivor nea = new Survivor("Nea",
+					"Balanced Landing","Streetwise","Urban Evasion");
 			survivorRepository.save(nea);
 		};
 	}
