@@ -29,16 +29,25 @@ public class DbdherenciaApplication {
 			Person vazquez = new Person("David","davidvazquezt2001@gmail.com","david2001");
 			personRepository.save(vazquez);
 
-			Killer trapper = new Killer("Trapper", "Presencia Perturbadora" ,"trampa para osos",
-					4.6,"Tall",32);
+			Killer trapper = new Killer("Trapper",
+					"Agitation",
+					"Brutal Strength",
+					"Unnerving Presence",
+					"trampa para osos",4.6,"Tall",32);
 			killerRepository.save(trapper);
 
-			Killer deathslinger = new Killer("Deathslinger" , "Interruptor del Hombre Muerto", "Aprehensor",
-					4.4,"Tall",32);
+			Killer deathslinger = new Killer("Deathslinger" ,
+					"Dead Man's Switch",
+					"Gearhead",
+					"Hex: Retribution",
+					"Aprehensor",4.4,"Tall",32);
 			killerRepository.save(deathslinger);
 
-			Killer nemesis = new Killer("Nemesis","Acecho Letal", "Virus T",
-					4.6,"Tall",32);
+			Killer nemesis = new Killer("Nemesis",
+					"Eruption",
+					"Hysteria",
+					"Lethal Pursuer",
+					"Virus T",4.6,"Tall",32);
 			killerRepository.save(nemesis);
 
 

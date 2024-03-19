@@ -13,11 +13,17 @@ public class Character {
 
     private String name;
 
-    private String perk;
+    private String perk1;
 
-    public Character(String name, String perk) {
+    private String perk2;
+
+    private String perk3;
+
+    public Character(String name, String perk1, String perk2, String perk3) {
         this.name = name;
-        this.perk = perk;
+        this.perk1 = perk1;
+        this.perk2 = perk2;
+        this.perk3 = perk3;
     }
 
     public Character() {
@@ -32,11 +38,27 @@ public class Character {
         this.name = name;
     }
 
-    public String getPerk() {
-        return perk;
+    public String getPerk1() {
+        return perk1;
     }
 
-    public void setPerk(String perk) {
-        this.perk = perk;
+    public void setPerk1(String perk1) {
+        this.perk1 = perk1;
+    }
+
+    public String getPerk2() {
+        return perk2;
+    }
+
+    public void setPerk2(String perk2) {
+        this.perk2 = perk2;
+    }
+
+    public String getPerk3() {
+        return perk3;
+    }
+
+    public void setPerk3(String perk3) {
+        this.perk3 = perk3;
     }
 }

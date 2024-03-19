@@ -25,7 +25,7 @@ public class KillerController {
     //validation
 
         boolean nameIsEmpty = newKiller.name().isBlank();
-        boolean perkIsEmpty = newKiller.perk().isBlank();
+        boolean perkIsEmpty = newKiller.perk1().isBlank();
         boolean powerIsEmpty = newKiller.power().isBlank();
         boolean speedIsEmpty = newKiller.speed() == 0.0;
 
@@ -45,7 +45,10 @@ public class KillerController {
             return new ResponseEntity<>("the killer already exist",HttpStatus.FORBIDDEN);
         }
 
-        Killer killer = new Killer(newKiller.name(),newKiller.perk(),newKiller.power(),newKiller.speed(),newKiller.height(),newKiller.terrorRadius());
+        Killer killer = new Killer(newKiller.name(),
+                newKiller.perk1(), newKiller.perk2(), newKiller.perk3(),
+                newKiller.power(),newKiller.speed(),newKiller.height(),newKiller.terrorRadius());
+
         killerRepository.save(killer);
 
     return new ResponseEntity<>("Se agrego nuevo killer",HttpStatus.CREATED);

@@ -24,8 +24,8 @@ public class Killer extends Character {
     public Killer() {
     }
 
-    public Killer(String name, String perk, String power, double speed, String height, int terrorRadius) {
-        super(name, perk);
+    public Killer(String name, String perk1, String perk2, String perk3, String power, double speed, String height, int terrorRadius) {
+        super(name, perk1, perk2, perk3);
         this.power = power;
         this.speed = speed;
         this.height = height;
@@ -67,4 +67,7 @@ public class Killer extends Character {
     public void setTerrorRadius(int terrorRadius) {
         this.terrorRadius = terrorRadius;
     }
+
+
+
 }
