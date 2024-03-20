@@ -6,13 +6,17 @@ import com.vazquez.dbdherencia.Models.subclass.Survivor;
 import com.vazquez.dbdherencia.Repositories.KillerRepository;
 import com.vazquez.dbdherencia.Repositories.PersonRepository;
 import com.vazquez.dbdherencia.Repositories.SurvivorRepository;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.Bean;
+import org.springframework.security.crypto.password.PasswordEncoder;
 
 @SpringBootApplication
 public class DbdherenciaApplication {
+	@Autowired
+	private PasswordEncoder passwordEncoder;
 
 	public static void main(String[] args) {
 		SpringApplication.run(DbdherenciaApplication.class, args);
@@ -26,7 +30,7 @@ public class DbdherenciaApplication {
 
 		return args ->{
 
-			Person vazquez = new Person("David","davidvazquezt2001@gmail.com","david2001");
+			Person vazquez = new Person("David","davidvazquezt2001@gmail.com", passwordEncoder.encode("david2001"));
 			personRepository.save(vazquez);
 
 			Killer trapper = new Killer("Trapper",

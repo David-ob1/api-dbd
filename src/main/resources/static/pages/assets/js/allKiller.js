@@ -82,7 +82,7 @@ function setCards(template,container){
         container.style.overflow = 'scroll' 
         container.style['overflow-x'] = ' hidden'
     }
-      }, 35);
+      }, 100);
       
     
     console.log(container.clientHeight)
