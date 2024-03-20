@@ -14,16 +14,18 @@ btn.addEventListener("click", e =>{
 
         alert("hola")
         
+        alert
 
         setTimeout(() => {
+            window.location.href = '/pages/index.html';
             console.log("Retrasado por 2 segundo.");
-          }, 2000);
+          }, 1000);
           
     })
 
     .catch(error => {
-        console.log(info)
         alert(error)
+        console.log(error)
     })
 
 })
