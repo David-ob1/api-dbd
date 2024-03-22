@@ -24,22 +24,22 @@ public class KillerController {
     public ResponseEntity<String> addKiller(@RequestBody NewKiller newKiller){
     //validation
 
-        boolean nameIsEmpty = newKiller.name().isBlank();
-        boolean perkIsEmpty = newKiller.perk1().isBlank();
-        boolean powerIsEmpty = newKiller.power().isBlank();
-        boolean speedIsEmpty = newKiller.speed() == 0.0;
-
-        if(nameIsEmpty || perkIsEmpty ||powerIsEmpty ||speedIsEmpty){
-
-            StringBuilder response = new StringBuilder();
-            response.append(nameIsEmpty ? "the name is not valid,complete it please." : "");
-            response.append(perkIsEmpty ? "the perk is not valid,complete it please." : "" );
-            response.append(powerIsEmpty ? "the power es not valid, complete it please." : "");
-            response.append(speedIsEmpty ? "complete the speed field" : "");
-
-            return new ResponseEntity<>(response.toString(), HttpStatus.FORBIDDEN);
-
-        }
+//        boolean nameIsEmpty = newKiller.name().isBlank();
+//        boolean perkIsEmpty = newKiller.perk1().isBlank();
+//        boolean powerIsEmpty = newKiller.power().isBlank();
+//        boolean speedIsEmpty = newKiller.speed() == 0.0;
+//
+//        if(nameIsEmpty || perkIsEmpty ||powerIsEmpty ||speedIsEmpty){
+//
+//            StringBuilder response = new StringBuilder();
+//            response.append(nameIsEmpty ? "the name is not valid,complete it please." : "");
+//            response.append(perkIsEmpty ? "the perk is not valid,complete it please." : "" );
+//            response.append(powerIsEmpty ? "the power es not valid, complete it please." : "");
+//            response.append(speedIsEmpty ? "complete the speed field" : "");
+//
+//            return new ResponseEntity<>(response.toString(), HttpStatus.FORBIDDEN);
+//
+//        }
 
         if(killerRepository.existsByName(newKiller.name())){
             return new ResponseEntity<>("the killer already exist",HttpStatus.FORBIDDEN);

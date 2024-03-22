@@ -67,28 +67,28 @@ function obtenerValores (){
 //     });
 // }
 
-// function enviarDatos (data,url){
+function enviarDatos (data,url){
 
-// fetch(url,{
-//     method:"Post",
-//     body:JSON.stringify(data)
-// })
-// .then(response =>response.json())
-// .then(responseData =>{
+fetch(url,{
+    method:"Post",
+    body:JSON.stringify(data)
+})
+.then(response =>response.json())
+.then(responseData =>{
 
-//    console.log(responseData)
+   console.log(responseData)
 
-// })
-// .catch(error =>{
-//     console.error("Hubo un error: ",error)
-//     alert("hubo un error")
+})
+.catch(error =>{
+    console.error("Hubo un error: ",error)
+    alert("hubo un error")
 
-// }
+}
     
-// )
+)
         
 
-// }
+}
 
 
 /*
