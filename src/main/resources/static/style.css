@@ -9,6 +9,9 @@
 .bodylogin{
     background:url("./img/wallpaper.jpg") no-repeat ;
 }
+.bodyRegister{
+background: url("./img/register-fondo.jpeg");
+}
 
 .add-Killer{
     background:url("./pages/assets/images/background.jpg") no-repeat ;
@@ -18,7 +21,9 @@
     background: url("./img/fondo-survi.jpg") no-repeat;
 }
 
-.bodylogin,.add-Killer,.add-survivor{
+
+
+.bodylogin,.add-Killer,.add-survivor,.bodyRegister{
     display: flex;
     justify-content: center;
     align-items: center;
