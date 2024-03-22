@@ -24,9 +24,11 @@ public class SecurityConfing {
                .requestMatchers("/pages/index.html","/pages/assets/landing.css","/style.css","/img/**").permitAll()
                     .requestMatchers("/formUser.html","/loginUser.js","/h2-console/**").permitAll()
 
-                    .requestMatchers("/api/killers/all","/pages/allKiller.html","/pages/assets/js/allKiller.js","/pages/assets/allKiller.css").permitAll()
+                    .requestMatchers("/api/killers/all","/pages/allKiller.html","/pages/allkiller.html","/pages/assets/js/allKiller.js","/pages/assets/allKiller.css").permitAll()
+
                     .requestMatchers("/pages/assets/portada/**","/pages/assets/images/**").permitAll()
-                    .requestMatchers("/pages/allSurvi.html","/api/survivor/all").permitAll()
+                    .requestMatchers("/pages/allSurvi.html","/api/survivor/all","/pages/allsurvi.html").permitAll()
+//                    .requestMatchers("")
 
                     .requestMatchers(HttpMethod.POST, "/api/persons","/api/login").permitAll()
                     .anyRequest().authenticated())

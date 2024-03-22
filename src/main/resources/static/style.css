@@ -14,7 +14,11 @@
     background:url("./pages/assets/images/background.jpg") no-repeat ;
 }
 
-.bodylogin,.add-Killer{
+.add-survivor{
+    background: url("./img/fondo-survi.jpg") no-repeat;
+}
+
+.bodylogin,.add-Killer,.add-survivor{
     display: flex;
     justify-content: center;
     align-items: center;
