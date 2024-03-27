@@ -55,7 +55,7 @@ axios.post(url,data)
 }
 
 
-/*
+/*killer
 Ghost Face
 Night Shroud
 Furtive Chase
@@ -65,4 +65,12 @@ average
 3.8
 32
 
+
+
+// survivor
+
+Leon
+Bite the Bullet
+Flashbang
+Rookie Spirit
 */

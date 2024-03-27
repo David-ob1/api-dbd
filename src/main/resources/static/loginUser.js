@@ -17,7 +17,7 @@ btn.addEventListener("click", e =>{
         alert
 
         setTimeout(() => {
-            window.location.href = '/pages/index.html';
+            location.href = '/pages/index.html';
             console.log("Retrasado por 2 segundo.");
           }, 1000);
           

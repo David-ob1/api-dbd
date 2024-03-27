@@ -11,9 +11,10 @@ console.log(Survivor)
 console.log(Survivor)
 console.log(Survivor)
 
-axios(endPoint,Survivor)
+axios.post(endPoint,Survivor)
 .then(response => {
-console.log("error")
+console.log("creando survivor")
+window.location.href = "allSurvi.html"
 })
 .catch(error => console.log(error))
 
