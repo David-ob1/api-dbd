@@ -2,13 +2,11 @@
 let btn = document.getElementById("btn-addKiller")
 let layout = document.querySelector("#layout")
 
-
-
 btn.addEventListener("click", e =>{
     e.preventDefault()
 
   const valores = obtenerValores()
-    
+  console.log(valores)
     console.log(valores.name)
     console.log(valores.perk1)
     console.log(valores.perk2)
@@ -17,11 +15,9 @@ btn.addEventListener("click", e =>{
     console.log(valores.height)
     console.log(valores.speed)
     console.log(valores.terrorRadius)
-
     enviarDatos(valores,"/api/killers/add")    
 
 })
-
 
 function obtenerValores (){
   
@@ -36,46 +32,15 @@ function obtenerValores (){
         terrorRadius: document.getElementById("terrorRadius").value,
     };
 
-
 }
 
 
-// function enviarDatos(data, url) {
-//     fetch(url, {
-//         method: "POST",
-//         headers: {
-//             "Content-Type": "application/json"
-//         },
-//         body: JSON.stringify(data)
-//     })
-//     .then(response => {
-//         if (!response.ok) {
-//             throw new Error('Network response was not ok');
-//         }
-//         return response.json();
-//     })
-//     .then(responseData => {
-//         alert("mandando")
-//         console.log(responseData);
-
-//         // Puedes agregar aquí más lógica para manejar la respuesta del servidor
-//     })
-//     .catch(error => {
-//         console.error("Hubo un error: ", error);
-//         alert("Hubo un error al enviar los datos");
-//         // Puedes agregar más lógica para manejar el error de manera adecuada
-//     });
-// }
-
 function enviarDatos (data,url){
 
-fetch(url,{
-    method:"Post",
-    body:JSON.stringify(data)
-})
-.then(response =>response.json())
+axios.post(url,data)
 .then(responseData =>{
-
+    console.log(data)
+    console.log("mandando")
    console.log(responseData)
 
 })
@@ -86,7 +51,6 @@ fetch(url,{
 }
     
 )
-        
 
 }
 
