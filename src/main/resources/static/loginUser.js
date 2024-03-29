@@ -12,9 +12,7 @@ btn.addEventListener("click", e =>{
         console.log(data)
         console.log("sign in!")
 
-        alert("hola")
         
-        alert
 
         setTimeout(() => {
             location.href = '/pages/index.html';
