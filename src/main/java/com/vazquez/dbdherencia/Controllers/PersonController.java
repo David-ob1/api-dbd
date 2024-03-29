@@ -22,7 +22,7 @@ public class PersonController {
     @Autowired
     private PasswordEncoder passwordEncoder;
 
-    @PostMapping("")
+    @PostMapping("/new")
     public ResponseEntity<String> registerPerson(@RequestBody NewPerson newPerson){
 
         Person person = new Person(newPerson.name(), newPerson.email(),passwordEncoder.encode(newPerson.password()));
