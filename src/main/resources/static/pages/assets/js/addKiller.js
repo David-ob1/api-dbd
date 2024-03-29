@@ -43,6 +43,8 @@ axios.post(url,data)
     console.log("mandando")
    console.log(responseData)
 
+   location.href ="allKiller.html"
+
 })
 .catch(error =>{
     console.error("Hubo un error: ",error)

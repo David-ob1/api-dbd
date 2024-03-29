@@ -83,12 +83,12 @@ function setCards(template,container){
   
     setTimeout(() => {
        
-    if( container.clientHeight > window.innerHeight ){
+    if( container.clientHeight >= window.innerHeight ){
 
         container.style.overflow = 'scroll' 
         container.style['overflow-x'] = ' hidden'
     }
-      }, 500);
+      }, 600);
       
     
     console.log(container.clientHeight)
