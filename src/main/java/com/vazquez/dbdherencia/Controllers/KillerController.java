@@ -22,6 +22,7 @@ public class KillerController {
 
     @PostMapping("/add")
     public ResponseEntity<String> addKiller(@RequestBody NewKiller newKiller){
+
     //validation
 
 //        boolean nameIsEmpty = newKiller.name().isBlank();
@@ -47,7 +48,8 @@ public class KillerController {
 
         Killer killer = new Killer(newKiller.name(),
                 newKiller.perk1(), newKiller.perk2(), newKiller.perk3(),
-                newKiller.power(),newKiller.speed(),newKiller.height(),newKiller.terrorRadius());
+                newKiller.power(),newKiller.speed(),newKiller.height()
+                ,newKiller.terrorRadius());
 
         killerRepository.save(killer);
 

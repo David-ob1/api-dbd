@@ -34,7 +34,7 @@ const endPoint = "/api/persons/new"
 
 
     function obtenerDatos (){
-console.log()
+        console.log()
         return {
             name: inputNme.value,
             email: inputEmail.value,
