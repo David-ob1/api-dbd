@@ -38,7 +38,7 @@ public class DbdherenciaApplication {
 //					"Brutal Strength",
 //					"Unnerving Presence",
 //					"trampa para osos",4.6,"Tall",32);
-//			killerRepository.save(trapper);
+//			killerRepository.save(trappejr);
 //
 //			Killer deathslinger = new Killer("Deathslinger" ,
 //					"Dead Man's Switch",
