@@ -29,43 +29,67 @@ public class DbdherenciaApplication {
 									  PersonRepository personRepository){
 
 		return args ->{
-//
-//			Person vazquez = new Person("David","davidvazquezt2001@gmail.com", passwordEncoder.encode("david2001"));
-//			personRepository.save(vazquez);
-//
-//			Killer trapper = new Killer("Trapper",
-//					"Agitat	ion",
-//					"Brutal Strength",
-//					"Unnerving Presence",
-//					"trampa para osos",4.6,"Tall",32);
-//			killerRepository.save(trappejr);
-//
-//			Killer deathslinger = new Killer("Deathslinger" ,
-//					"Dead Man's Switch",
-//					"Gearhead",
-//					"Hex: Retribution",
-//					"Aprehensor",4.4,"Tall",32);
-//			killerRepository.save(deathslinger);
-//
-//			Killer nemesis = new Killer("Nemesis",
-//					"Eruption",
-//					"Hysteria",
-//					"Lethal Pursuer",
-//					"Virus T",4.6,"Tall",32);
-//			killerRepository.save(nemesis);
-//
-//
-//			Survivor dwight = new Survivor("Dwight",
-//					"Bond","Leader","Prove Thyself");
-//			survivorRepository.save(dwight);
-//
-//			Survivor david = new Survivor("David",
-//					"Dead Hard","No Mither","We're Gonna Live Forever");
-//			survivorRepository.save(david);
-//
-//			Survivor nea = new Survivor("Nea",
-//					"Balanced Landing","Streetwise","Urban Evasion");
-//			survivorRepository.save(nea);
+
+			Person vazquez = new Person("David","davidvazquezt2001@gmail.com", passwordEncoder.encode("david2001"));
+			personRepository.save(vazquez);
+
+			Killer trapper = new Killer("Trapper",
+					"Agitation",
+					"Brutal Strength",
+					"Unnerving Presence",
+					"trampa para osos",4.6,"Tall",32);
+			killerRepository.save(trapper);
+
+			Killer deathslinger = new Killer("Deathslinger" ,
+					"Dead Man's Switch",
+					"Gearhead",
+					"Hex: Retribution",
+					"Aprehensor",4.4,"Tall",32);
+			killerRepository.save(deathslinger);
+
+			Killer nemesis = new Killer("Nemesis",
+					"Eruption",
+					"Hysteria",
+					"Lethal Pursuer",
+					"Virus T",4.6,"Tall",32);
+			killerRepository.save(nemesis);
+
+//			Killer doctor = new Killer(
+//				"doctor","Monitor & Abuse","Overcharge","Overwhelming Presence","Carter's Spark",
+//					4.6,"Tall",32);
+//				killerRepository.save(doctor);
+
+			Killer demogorgon = new Killer(
+					"demogorgon","Cruel Limits","Mindbreaker","Surge","Of the Abyss",
+					4.6,"Tall",32);
+
+			killerRepository.save(demogorgon);
+
+		Killer wraith = new Killer(
+				"Wraith","Bloodhound","Predator","Predator","Wailing Bell",
+				4.6,"Tall",32
+		);
+
+		killerRepository.save(wraith);
+
+
+
+			Survivor dwight = new Survivor("Dwight",
+					"Bond","Leader","Prove Thyself");
+			survivorRepository.save(dwight);
+
+			Survivor david = new Survivor(
+					"David","Dead Hard","No Mither","We're Gonna Live Forever");
+			survivorRepository.save(david);
+
+			Survivor nea = new Survivor("Nea",
+					"Balanced Landing","Streetwise","Urban Evasion");
+			survivorRepository.save(nea);
+
+
+
+
+
 		};
 	}
 }

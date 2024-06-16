@@ -21,7 +21,7 @@ public class SecurityConfing {
 
     http.authorizeHttpRequests(ant->
             ant
-               .requestMatchers("/pages/index.html","/pages/assets/landing.css","/style.css","/img/**").permitAll()
+               .requestMatchers("/index.html","/pages/assets/landing.css","/style.css","/img/**").permitAll()
                     .requestMatchers("/formUser.html","/loginUser.js","/h2-console/**").permitAll()
 
                     .requestMatchers("/api/killers/all","/pages/allKiller.html","/pages/allkiller.html","/pages/assets/js/allKiller.js","/pages/assets/allKiller.css").permitAll()
